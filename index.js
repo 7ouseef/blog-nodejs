@@ -3,7 +3,6 @@ const mongoose=require('mongoose');
 const methodOverride = require('method-override');
 const cookie=require('cookie-parser');
 const app=express();
-const port=8080;
 const home=require('./routes/homeRoutes');
 const blogs=require('./routes/blogsRoutes');
 const about=require('./routes/aboutRoutes');
@@ -35,4 +34,4 @@ app.use('/auth',auth);
 
 app.use((req,res)=>res.status(404).render('404',{title:'404'})); 
 
-app.listen(port);
+app.listen(process.env.PORT);
