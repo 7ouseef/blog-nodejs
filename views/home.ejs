@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+    <div class="home-page">
+        <div class="most-recent">
+            <h1>Most Recent Blogs</h1>
+            <% for(blog of blogs) { %>
+                <div class="post">
+                    <div class="head">
+                        <a href=<%= "/blogs/" + blog._id %> > <h2><%= blog.heading %></h1> </a>
+                        <h5> <%= blog.date.toString().split(" ").slice(0,4).join(" ") %> , <%= blog.date.toString().split(" ")[4] %> </h2>
+                    </div>
+                    <p> <%= blog.content %> </p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="single-post">
+    <div class="head">
+        <h2><%= blog.heading %></h2>
+        <div class="button-wrapper">
+            <h5> <%= blog.date.toString().split(" ").slice(0,4).join(" ") %> , <%= blog.date.toString().split(" ")[4] %> </h2>
+            <% if (blog.owner.toString() == user._id.toString() ) { %>
+                <div class="buttons">
+                    <a href=<%= "/blogs/" + blog._id + "/update" %> ><button>Update</button></a>
+                    <a href="/blogs/<%= blog._id %>?_method=DELETE" ><button>Delete</button></a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <p> <%= blog.content %> </p>
+    <br>
+    <h4>Written by <%= blog.author %> </h4>
+</div>

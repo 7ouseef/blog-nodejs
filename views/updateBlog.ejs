@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+    <div class="create-form">
+    <form action="/blogs/<%= blog._id %>/update?_method=PUT" method="post">
+        <input type="text" id="name" placeholder="Title" name="name" value= "<%- blog.heading %>" >
+        <textarea name="text" id="content" placeholder="Content" %> > <%= blog.content %> </textarea>
+        <button type="submit">Update</button>
+    </form>
+    </div>
+</body>
+</html>

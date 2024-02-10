@@ -1,0 +1,23 @@
+
+<nav>
+    <div class="left">
+        <h1><a href="">Blogspot Clone</a></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="right">
+        <ul class="nav-items">
+            <% if (user) { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <!-- <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li> -->
+                <li><a href="/auth/logout">Logout</a></li>
+                <li><a style="pointer-events: none; cursor: default; border-bottom: 2px solid beige; padding-bottom: 3px;" ><%= user.name %> </a> </li>
+                <li><a href="/blogs/create" ><i class="fa-solid fa-plus"></i></a></li>
+            <% } else { %>
+                <li><a href="/auth/signup">Sign up</a></li>
+                <li><a href="/auth/login">Log in</a></li>
+            <% } %>
+        </ul>
+    </div>
+</nav>

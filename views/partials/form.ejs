@@ -1,0 +1,20 @@
+<div class="auth-form">
+    <h1> <%= title %> </h1>
+    <form action="/auth/<%= title.toLowerCase() %>" method="post">
+        <% if (title=="Signup") { %>
+         <div class="name">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="" required>
+         </div>
+        <% } %>
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="" required>
+        </div>
+        <div class="pass">
+            <label for="pass">Password</label>
+            <input type="text" name="pass" id="" required>
+        </div>
+        <button><%= title %></button>
+    </form>
+</div>

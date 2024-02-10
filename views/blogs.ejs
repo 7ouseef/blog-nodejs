@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+    <div class="most-recent">
+        <h1>Blogs</h1>
+        <% for(blog of blogs) { %>
+            <%- include('./partials/blog-slice.ejs') %>
+        <% } %>
+    </div>
+</body>
+</html>
